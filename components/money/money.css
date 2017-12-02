@@ -1,0 +1,15 @@
+.money-left {
+    margin: auto;
+    width: 300px;
+    border: 2px solid black;
+    font-size: 2em;
+    text-align: center;
+}
+
+.edit {
+	float: right;
+	background: green;
+	width: 30px;
+	height: 1.15em;
+	cursor: pointer;
+}

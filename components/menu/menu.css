@@ -1,0 +1,167 @@
+.spents {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.spents td:nth-child(2) {
+	text-align: right;
+}
+
+.spents td {
+	width: 45%;
+    padding: 10px;
+    border-bottom: 1px  dashed black;
+	transition: all 3s ease-out;
+}
+
+
+
+.spents th.date {
+	background-color: white;
+}
+
+.spents th.date:hover {
+	background-color: white;
+}
+
+.spents tr:nth-child(2n+1) {	
+	background-color: lightgoldenrodyellow;
+}
+
+.spents tr:hover {
+    background-color: rgba(111, 111, 233, 0.33);
+}
+
+.show-comment {
+	position: relative;
+	opacity: 0.4;
+	cursor: pointer;
+}
+
+.show-comment:hover {
+	opacity: 1;
+}
+
+.show-comment:before {
+	position: absolute;
+	top: 1px;
+	left: 17px;
+	content: ' ';
+	background: blue;
+	width: 5px;
+	height: 19px;
+	transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.show-comment:after {
+	position: absolute;
+	top: 8px;
+	left: 10px;
+	content: ' ';
+	background: blue;
+	width: 19px;
+	height: 5px;
+}
+
+.comment {
+	display: none;
+	margin: 10px 0px 0px 0px;
+	font-size: 0.8em;
+	transition: all 0.3s ease-out;
+}
+
+.display-comment>div {
+	display: block;
+}
+
+.display-comment>.show-comment:before {
+	transform: translateY(30px);
+	opacity: 0;
+}
+
+.spents td.display-comment {
+	transition: all 0.3s ease-in;
+}
+
+
+.delete {
+	width: 7%;
+    position: relative;
+    visibility: hidden;
+    opacity:  0.3;
+	background-color: #424242;      
+	cursor: pointer;
+}
+
+.delete:hover {
+    opacity: 1;
+}
+
+tr:hover .delete {
+    visibility: visible;
+}
+
+.delete::before, .delete::after {
+    position: absolute;
+    right: -20px;
+    top: -14px; 
+    width: 7px;
+    height: 28px;
+    content: ' ';
+    background-color: red;
+    /* border-left: 2px solid black; */
+}
+
+.delete::before {
+    transform: rotate(45deg);
+}
+
+.delete::after {
+    transform: rotate(-45deg);
+}
+
+.show-date-change {
+	opacity: 0;
+	z-index: 1;
+	width: 30px;
+	height: 30px;
+	position: relative;
+	border: 1px solid black;
+	cursor: pointer;
+}
+
+tr:hover .show-date-change {
+	opacity: 0.6;
+}
+
+tr .show-date-change:hover {
+	opacity: 1;
+}
+
+.show-date-change>div {
+	position: relative;	
+	z-index: 1000;
+	width: 170px;
+	padding: 15px;
+	border: 1px dashed black;
+	background-color: white;
+}
+
+.show-date-change>div.hidden {
+	display: none;
+}
+
+.hide-date-change {
+	position: relative;
+	width: 20px;
+	height: 20px;
+	background-color: red;
+}
+
+
+
+
+
+.set-date-range {
+	text-align: center;
+}

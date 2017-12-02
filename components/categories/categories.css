@@ -1,0 +1,117 @@
+.left {
+    left: 0;  
+}
+
+.left-hidden {
+    transform: translateX(-150px);
+    /* left: -150px; */
+}
+
+.right {
+    right: 0px;
+    /* transform: translateX(0px); */
+}
+
+.right-hidden {
+    right: 0px; 
+    transform: translateX(150px);
+}
+
+.categories {
+    position: fixed;
+    height: 100%;
+    width: 110px;
+    overflow: hidden;
+    top: 0;
+    z-index: 100;
+    background-color: white;
+    transition: all 0.5s ease-out;
+}
+
+.categories th {
+    padding-bottom: 20px;
+}
+
+.categories tr {
+	position: relative;
+}
+
+.categories td {
+    border: 1px solid black;
+    display: block;
+    height: 100px;
+    width: 100px;
+    text-align: center;
+    line-height: 150px;
+	cursor: pointer;
+}
+
+.delete-cat {
+	position: relative;
+	opacity: 0.5;
+}
+
+.delete-cat:before, .delete-cat:after {
+	position: absolute;
+	top: -145px;
+	right: 10px;
+	content: ' ';
+	background: red;
+	width: 5px;
+	height: 19px;
+	transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+}
+
+.delete-cat:before {
+	transform: rotateZ(45deg);
+}
+
+.delete-cat:after {
+	transform: rotateZ(-45deg);
+}
+
+.delete-cat:hover {
+	opacity: 1;
+}
+
+.categories td:hover {
+    background: #8BBBCB;
+	opacity: 1;
+}
+
+.categories tr:last-child>td {
+    border: 1px dashed black;
+    opacity: 0.5;
+    font-weight: bold;
+    font-size: 2.2em;
+}
+
+.categories tr:last-child>td:hover {
+    opacity: 1;
+    cursor: pointer;
+    background: lightblue;    
+}
+
+.categ-arrow {
+    position: fixed;
+    background: grey;
+    width: 110px;
+    height: 40px;
+    opacity: 0.5;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.categ-arrow:active {
+    transform: scale(0.9);
+    transform-origin: 50% 50%; 
+}
+
+.arrow-up {
+    top: 0px;
+}
+
+.arrow-down { 
+    bottom: 0px;
+}

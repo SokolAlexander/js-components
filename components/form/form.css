@@ -1,0 +1,31 @@
+input {
+    min-width: 150px;
+    max-width: 270px;
+    width: 90px;
+    margin: 10px;
+    padding: 5px;
+}
+
+.form-wrapper {
+    max-width: 440px;
+    margin: auto;
+}
+
+form {
+    margin: 0;
+    padding: auto;
+}
+
+.error {
+	background: red;
+	border: 3px solid maroon;
+	color: white;
+	max-width: 120px;
+	display: none;
+	margin: auto;
+	text-align: center;
+}
+
+.display-error {
+	display: block;
+}
