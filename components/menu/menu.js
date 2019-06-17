@@ -228,7 +228,7 @@
 			};
 						
 			this.data = this.data.filter((item, i, arr) => {
-				return ((new Date(item.date).valueOf() > dateFromMs) && (new Date(item.date).valueOf() < dateToMs))
+				return ((new Date(item.date).valueOf() >= dateFromMs) && (new Date(item.date).valueOf() <= dateToMs))
 			});
 			
 			this.render();
